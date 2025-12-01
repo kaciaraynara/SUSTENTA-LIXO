@@ -1,18 +1,18 @@
 SUSTENTA CE: IMPLEMENTAÇÃO DO SISTEMA MULTIPLATAFORMA (N708)
 
-Este repositório contém o código-fonte funcional do sistema Sustenta CE, desenvolvido para a Etapa 2 do Projeto Aplicado Multiplatforma, em alinhamento com o ODS 11 (Cidades e Comunidades Sustentáveis).
+Este repositório contém o código-fonte funcional do sistema Sustenta CE, desenvolvido para a Etapa 2 do Projeto Aplicado Multiplataforma, em alinhamento com o ODS 11 (Cidades e Comunidades Sustentáveis).
+
+
 
 1. Funcionalidades Implementadas
 
 O sistema foi implementado seguindo os requisitos da Etapa 1 e o foco na solução multiplataforma:
 
-App Mobile (Cidadão): Criação de relatos com geolocalização, visualização do histórico e funcionalidades de localização e reporte rápido.
+App Mobile (Cidadão): Criação de relatos com geolocalização e visualização do histórico.
 
 Painel Web (Gestor): Visualização em tempo real de todos os relatos, filtragem por status e botões de Ação Rápida (Mudar Status).
 
 Integração: Comunicação funcional e persistente entre o Frontend e o Backend (Firestore).
-
-
 
 
 
@@ -52,22 +52,23 @@ Testes Unitários (Simulados) e de Validação.
 
 
 
+3. INSTRUÇÕES CRÍTICAS DE ACESSO (SOLUÇÃO PARA O ERRO DE PERMISSÃO)
 
+ATENÇÃO PROFESSOR: O Painel Gestor está gerando o erro "Permissão Negada" porque as regras de segurança padrão do Firebase bloqueiam a leitura de coleções públicas por qualquer usuário (mesmo autenticado).
 
-3. Instruções de Acesso e Execução
+Para que o Painel Gestor carregue a lista de relatos e os botões funcionem, por favor, realize a seguinte correção em seu ambiente Firebase:
 
-O sistema está configurado para o ambiente de execução do Canvas, utilizando o token de autenticação automático.
+Acesse o seu Console do Firebase (Firestore Database).
+
+Vá para a aba "Regras" (Rules).
+
+Publique as regras de segurança fornecidas no arquivo firestore-security-rules.md na raiz deste repositório.
+
+Após aplicar as regras, o sistema funcionará perfeitamente.
 
 App Mobile: Abrir o arquivo frontend/mobile/index.html em qualquer navegador.
 
 Painel Gestor: Abrir o arquivo frontend/web/index.html em qualquer navegador.
-
-Credenciais de Teste: O sistema utiliza a autenticação automática do Canvas (__initial_auth_token).
-
-
-
-
-
 
 
 
@@ -75,15 +76,19 @@ Credenciais de Teste: O sistema utiliza a autenticação automática do Canvas (
 
 O projeto foi validado para garantir que fosse útil e utilizável pelo público real (Morador/Cidadão).
 
+Público Validado (Amostra): Ana Yara de Aquino (Bairro Quintino Cunha) e Luís Antônio Gomes Paiva (Bairro Edson Queiroz).
+
+Principal Feedback: O botão de GPS no celular não dava feedback visual de carregamento.
+
+Ajuste Implementado: Implementamos um indicador visual (animate-pulse e texto "Buscando GPS...") para melhorar a usabilidade em campo.
 
 (O relatório completo da validação, o feedback e as evidências estão na pasta validation/.)
 
 
 
-
-
-
 5. Estrutura do Repositório (Etapa 2)
+
+A estrutura segue o padrão obrigatório do N708 para evitar penalidades:
 
 SUSTENTA-LIXO/
 ├── README.md
@@ -100,44 +105,31 @@ SUSTENTA-LIXO/
 
 
 
-
-
 6. Equipe de Desenvolvimento
 
 Membro
 
 Papel
 
-
 Jessica Barroso Campos
 
 Gerente de Projeto
-
-
 
 Ana Cristina Castelo Branco Rodrigues
 
 Dev Frontend (Mobile)
 
-
-
 Andressa de Oliveira Melo
 
 Dev Frontend (Web)
-
-
 
 Raynara Kácia Magalhães Fonteles
 
 Dev Backend
 
-
-
 Ruben Levi de Oliveira Cariolano
 
 UI/UX Designer
-
-
 
 Marcos Vinicius Bonfim Silva Evangelista
 

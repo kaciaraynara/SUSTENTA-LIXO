@@ -1,0 +1,26 @@
+Arquivos Ignorados pelo Git (Segurança e Limpeza)
+
+1. CREDENCIAIS E VARIÁVEIS DE AMBIENTE (MUITO IMPORTANTE!)
+
+Garante que as chaves do Firebase (no .env.local) não vão para o GitHub.
+
+.env
+.env.local
+.env.*.local
+*.env
+
+2. PASTAS DE DEPENDÊNCIAS E BUILD
+
+Estas pastas são geradas automaticamente e não devem estar no repositório.
+
+node_modules
+dist
+build
+temp
+/backend/node_modules/
+
+3. ARQUIVOS DE LOG E CACHE
+
+npm-debug.log
+.vscode-test
+.vs
