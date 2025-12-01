@@ -2,9 +2,41 @@ SUSTENTA CE: IMPLEMENTAÇÃO DO SISTEMA MULTIPLATAFORMA (N708)
 
 Este repositório contém o código-fonte funcional do sistema Sustenta CE, desenvolvido para a Etapa 2 do Projeto Aplicado Multiplataforma, em alinhamento com o ODS 11 (Cidades e Comunidades Sustentáveis).
 
+Resumo da Etapa 1 (Planejamento)
 
+A Etapa 1 (N705) foi focada na Engenharia de Requisitos e Arquitetura, estabelecendo a base para este projeto de implementação:
 
-1. Funcionalidades Implementadas
+Artefato
+
+Detalhe
+
+Finalidade
+
+Requisitos (RFs e RNFs)
+
+Documentação completa dos requisitos funcionais (Ex: Envio de Relato) e não-funcionais (Ex: Segurança, Performance).
+
+Definiu o O QUE e o COMO do sistema.
+
+Arquitetura
+
+Definição da arquitetura de 3 Camadas (Frontend, Backend, Dados), escolhendo React Native e ReactJS para o Multiplataforma.
+
+Garantiu a escalabilidade e a escolha tecnológica correta.
+
+Modelo de Dados
+
+Criação do Diagrama ER e Dicionário de Dados, com foco no uso de PostgreSQL/PostGIS para localização.
+
+Estruturou o armazenamento de dados geoespaciais.
+
+Protótipos
+
+Criação de wireframes e protótipos navegáveis (Web e Mobile).
+
+Validou a usabilidade inicial e o fluxo de usuário.
+
+1. Funcionalidades Implementadas (Etapa 2)
 
 O sistema foi implementado seguindo os requisitos da Etapa 1 e o foco na solução multiplataforma:
 
@@ -13,8 +45,6 @@ App Mobile (Cidadão): Criação de relatos com geolocalização e visualizaçã
 Painel Web (Gestor): Visualização em tempo real de todos os relatos, filtragem por status e botões de Ação Rápida (Mudar Status).
 
 Integração: Comunicação funcional e persistente entre o Frontend e o Backend (Firestore).
-
-
 
 2. Tecnologias e Arquitetura
 
@@ -50,8 +80,6 @@ Python / Validações JS
 
 Testes Unitários (Simulados) e de Validação.
 
-
-
 3. INSTRUÇÕES CRÍTICAS DE ACESSO (SOLUÇÃO PARA O ERRO DE PERMISSÃO)
 
 ATENÇÃO PROFESSOR: O Painel Gestor está gerando o erro "Permissão Negada" porque as regras de segurança padrão do Firebase bloqueiam a leitura de coleções públicas por qualquer usuário (mesmo autenticado).
@@ -70,8 +98,6 @@ App Mobile: Abrir o arquivo frontend/mobile/index.html em qualquer navegador.
 
 Painel Gestor: Abrir o arquivo frontend/web/index.html em qualquer navegador.
 
-
-
 4. Validação com Público-Alvo (Obrigatório)
 
 O projeto foi validado para garantir que fosse útil e utilizável pelo público real (Morador/Cidadão).
@@ -83,8 +109,6 @@ Principal Feedback: O botão de GPS no celular não dava feedback visual de carr
 Ajuste Implementado: Implementamos um indicador visual (animate-pulse e texto "Buscando GPS...") para melhorar a usabilidade em campo.
 
 (O relatório completo da validação, o feedback e as evidências estão na pasta validation/.)
-
-
 
 5. Estrutura do Repositório (Etapa 2)
 
@@ -100,9 +124,6 @@ SUSTENTA-LIXO/
 ├── backend/                   (Código Simulado do Servidor)
 ├── tests/                     (Testes Automatizados)
 └── database/                  (Script SQL do Banco)
-
-
-
 
 
 6. Equipe de Desenvolvimento
